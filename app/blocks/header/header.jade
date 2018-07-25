@@ -7,45 +7,44 @@ include ../icon/icon
 
 mixin header()
 	+b('header').header&attributes(attributes)
-			+container
-				+e.content
-						+e.info
-							+switch({
-								items: [
-									{
-										text: 'рус',
-										active: true
-									},
-									{
-										text: 'eng'
-									}
-								]
-							}).header__switch
+		+container
+			+e.content
+				+e.info
+					+switch({
+						items: [
+							{
+								text: 'рус',
+								active: true
+							},
+							{
+								text: 'eng'
+							}
+						]
+					}).header__switch
 
-							+shedule
+					+shedule
 
-						+logo.header__logo
+				+logo.header__logo
 
-						+socials({
-							items: [
-								{
-									href: '#',
-									icon: 'vk'
-								},
-								{
-									href: '#',
-									icon: 'facebook'
-								},
-								{
-									href: '#',
-									icon: 'instagram'
-								},
-								{
-									href: '#',
-									icon: 'youtube'
-								}
-							]
-						})
+				+socials({
+					items: [
+						{
+							href: '#',
+							icon: 'vk'
+						},
+						{
+							href: '#',
+							icon: 'facebook'
+						},
+						{
+							href: '#',
+							icon: 'instagram'
+						},
+						{
+							href: '#',
+							icon: 'youtube'
+						}
+					]
+				})
 
-				+icon('triangle').icon-triangle
-
+			+icon('triangle').icon-triangle
