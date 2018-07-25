@@ -1,0 +1,11 @@
+mixin button(data)
+	- data = data || {}
+
+	+b('button').button(type='button')&attributes(attributes)
+		if data.quantity
+			+e.group
+				+e('span').text=data.text
+				+e.quantity=data.quantity
+
+		else
+			+e('span').text=data.text

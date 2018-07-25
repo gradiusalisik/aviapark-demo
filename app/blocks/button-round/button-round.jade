@@ -1,0 +1,9 @@
+mixin button-round(data)
+	- data = data || {}
+
+	+b(data.href ? 'a' : 'button').button-round(
+		type=!data.href ? 'button' : false
+		href=data.href || false
+		target=data.href ? '_blank' : false
+	)&attributes(attributes)
+		+icon(data.icon).icon(class=data.icon ? '_#{data.icon}' : '')

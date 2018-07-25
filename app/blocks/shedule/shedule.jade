@@ -1,0 +1,10 @@
+include ../icon/icon
+
+mixin shedule(data)
+	- data = data || {}
+
+	+b.shedule&attributes(attributes)
+		+icon('clock').icon
+		+e.info
+			+e.text сегодня открыт до 22:00
+			+e('a').link(href=data.href || jv0) время работы

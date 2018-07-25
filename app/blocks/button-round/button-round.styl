@@ -1,0 +1,25 @@
+.button-round
+	display flex
+	justify-content center
+	align-items center
+	size 36px
+	background-color transparent
+	border 1px solid $c-gray
+	border-radius 50%
+	transition background-color .3s
+
+	&:hover
+		background-color $c-dark
+
+	&:hover &
+		&__icon
+			color $c-white
+
+	&__icon
+		size 16px
+		color $c-gray
+		transition color .3s
+
+		&_instagram
+			size 14px
+

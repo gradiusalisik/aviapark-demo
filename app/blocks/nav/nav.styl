@@ -1,0 +1,20 @@
+.nav
+	&__list
+		display flex
+		justify-content space-between
+
+	&__item:not(:last-child)
+		margin-right 28px
+
+	&__link
+		font-family $navigo
+		font-size 12px
+		font-weight 700
+		text-decoration none
+		text-transform uppercase
+		color $c-white
+		border-bottom 1px solid transparent
+		transition border-bottom .3s
+
+		&:hover
+			border-bottom 1px solid $c-white

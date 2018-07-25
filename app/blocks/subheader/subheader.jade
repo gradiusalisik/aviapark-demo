@@ -1,0 +1,56 @@
+include ../button-round/button-round
+include ../container/container
+include ../button/button
+include ../nav/nav
+
+mixin subheader()
+	+b.subheader&attributes(attributes)
+		+container
+			+e.content
+				+e.left
+					+button-round({
+						icon: 'search'
+					}).subheader__search
+
+					+button({
+						text: 'Карта'
+					})
+
+				+e.center
+					+nav({
+						items: [
+							{
+								text: 'магазины'
+							},
+							{
+								text: 'рестораны'
+							},
+							{
+								text: 'развлечения'
+							},
+							{
+								text: 'дети'
+							},
+							{
+								text: 'услуги'
+							},
+							{
+								text: 'акции'
+							},
+							{
+								text: 'новости'
+							},
+							{
+								text: 'мероприятия'
+							},
+							{
+								text: 'блог'
+							}
+						]
+					})
+
+				+e.right
+					+button({
+						text: 'Кабинет',
+						quantity: 2
+					})

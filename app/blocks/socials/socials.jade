@@ -1,0 +1,9 @@
+include ../button-round/button-round
+
+mixin socials(data)
+	- data = data || {}
+
+	+b.socials&attributes(attributes)
+		each item in data.items
+			+button-round(item).socials__link
+

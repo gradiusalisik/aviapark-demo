@@ -1,0 +1,9 @@
+mixin switch(data)
+	- data = data || {}
+	+b.switch&attributes(attributes)
+		each item in data.items
+			+e('a').link(
+				href=item.href || jv0
+				class=item.active ? '_active' : ''
+			)
+				+e('span').text=item.text

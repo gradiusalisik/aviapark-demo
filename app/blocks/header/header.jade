@@ -1,0 +1,51 @@
+include ../container/container
+include ../switch/switch
+include ../shedule/shedule
+include ../logo/logo
+include ../socials/socials
+include ../icon/icon
+
+mixin header()
+	+b('header').header&attributes(attributes)
+			+container
+				+e.content
+						+e.info
+							+switch({
+								items: [
+									{
+										text: 'рус',
+										active: true
+									},
+									{
+										text: 'eng'
+									}
+								]
+							}).header__switch
+
+							+shedule
+
+						+logo.header__logo
+
+						+socials({
+							items: [
+								{
+									href: '#',
+									icon: 'vk'
+								},
+								{
+									href: '#',
+									icon: 'facebook'
+								},
+								{
+									href: '#',
+									icon: 'instagram'
+								},
+								{
+									href: '#',
+									icon: 'youtube'
+								}
+							]
+						})
+
+				+icon('triangle').icon-triangle
+

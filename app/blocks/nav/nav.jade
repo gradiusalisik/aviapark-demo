@@ -1,0 +1,8 @@
+mixin nav(data)
+	- data = data || {};
+
+	+b('nav').nav&attributes(attributes)
+		+e('ul').list
+			each item in data.items
+				+e('li').item
+					+e('a').link(href=item.href || jv0)=item.text
